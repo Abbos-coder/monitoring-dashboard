@@ -1,0 +1,26 @@
+.header-wrapper {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+  background-color: #fff;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 14px;
+}
+
+.avatar {
+  display: flex;
+  border-radius: 100px;
+  background-color: #f3f4f5;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  margin: 12px 15px;
+}

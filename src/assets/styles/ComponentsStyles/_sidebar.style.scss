@@ -1,0 +1,90 @@
+h1 {
+  color: green;
+}
+
+.logo {
+  margin: 0 auto;
+}
+
+.img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-bottom: 32px;
+  padding-top: 24px;
+}
+
+.el-row {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+.el-col-12 {
+  max-width: 256px;
+  height: 380px;
+}
+
+#icon {
+  margin-right: 5px;
+}
+
+.el-menu-item {
+  font-size: 15px;
+  font-weight: 500;
+
+  > span {
+    font-weight: 500;
+  }
+}
+
+.el-sub-menu > .el-sub-menu__title > span {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.el-menu-item-group__title {
+  font-size: 15px !important;
+  font-weight: 500;
+}
+
+.el-menu {
+  border: none;
+  font-weight: 500;
+}
+
+.el-input {
+  padding: 10px;
+}
+
+.el-input__wrapper {
+  border-radius: 5px !important;
+  height: 36px;
+}
+
+.el-menu-item.is-active {
+  background: transparent;
+
+  &:hover {
+    background: #e5af5e;
+  }
+}
+
+.is_active_route > .el-menu-item {
+  background-color: #e5af5e;
+  color: #fff;
+  font-weight: 600;
+
+  > .dot {
+    background: #fff;
+  }
+}
+
+.el-menu-item:hover, .el-sub-menu__title:hover {
+  background-color: rgba(229, 175, 94, 0.2);
+}
+
+:deep(.el-sub-menu__title):hover {
+  background-color: rgba(229, 175, 94, 0.2);
+}

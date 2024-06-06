@@ -1,0 +1,92 @@
+$size: 0.5rem;
+
+// space functions
+@for $i from 1 through 16 {
+  .mt-#{$i} { margin-top: ($i * $size) !important; }
+  .mb-#{$i} { margin-bottom: ($i * $size) !important; }
+  .ml-#{$i} { margin-left: ($i * $size) !important; }
+  .mr-#{$i} { margin-right: ($i * $size) !important; }
+  .mx-#{$i} { margin-right: ($i * $size) !important; margin-left: ($i * $size) !important; }
+  .my-#{$i} { margin-top: ($i * $size) !important; margin-bottom: ($i * $size) !important; }
+  .ma-#{$i} { margin: ($i * $size) !important; }
+
+  .pt-#{$i} { padding-top: ($i * $size) !important; }
+  .pb-#{$i} { padding-bottom: ($i * $size) !important; }
+  .pl-#{$i} { padding-left: ($i * $size) !important; }
+  .pr-#{$i} { padding-right: ($i * $size) !important; }
+  .px-#{$i} { padding-right: ($i * $size) !important; padding-left: ($i * $size) !important; }
+  .py-#{$i} { padding-top: ($i * $size) !important; padding-bottom: ($i * $size) !important; }
+  .pa-#{$i} { padding: ($i * $size) !important; }
+}
+
+// flex functions
+@each $property in justify-content, align-items, align-self {
+  @each $value in start, end, center, baseline, stretch {
+    .#{$property}-#{$value} {
+      #{$property}: #{$value};
+    }
+  }
+}
+
+// text spacing
+$text-align-values: (
+        center: center,
+        end: end,
+        start: start
+);
+
+@each $class, $value in $text-align-values {
+  .text-#{$class} {
+    text-align: $value;
+  }
+}
+
+// text transform
+$text-transform-values: (
+        uppercase: uppercase,
+        capitalize: capitalize,
+        lowercase: lowercase
+);
+
+@each $class, $value in $text-transform-values {
+  .text-#{$class} {
+    text-transform: $value;
+  }
+}
+
+
+
+$xxl: 1950px;
+$xl: 1200px;
+$lg: 1024px;
+$md: 768px;
+$sm: 425px;
+$xs: 375px;
+
+@mixin screen($size) {
+  @if $size == 'xs' {
+    @media (min-width: 0) and (max-width: $xs) {
+      @content;
+    }
+  } @else if $size == 'sm' {
+    @media (min-width: $xs) and (max-width: $sm) {
+      @content;
+    }
+  } @else if $size == 'md' {
+    @media (min-width: $sm) and (max-width: $md) {
+      @content;
+    }
+  } @else if $size == 'lg' {
+    @media (min-width: $md) and (max-width: $lg) {
+      @content;
+    }
+  } @else if $size == 'xl' {
+    @media (min-width: $lg) and (max-width: $xl) {
+      @content;
+    }
+  } @else if $size == 'xxl' {
+    @media (min-width: ($xl + 1)) {
+      @content;
+    }
+  }
+}

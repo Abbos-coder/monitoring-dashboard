@@ -1,0 +1,38 @@
+.el-input--large .el-input__wrapper,
+.el-button {
+  border-radius: 6px !important;
+  height: 44px;
+}
+.el-aside {
+  background-color: #fff;
+}
+.el-menu-item *,
+.el-sub-menu__title * {
+  vertical-align: middle !important;
+}
+.el-menu-item.is-active {
+  background: #e8ebf3;
+}
+
+.el-pagination__jump {
+  margin: auto !important;
+}
+.el-dialog.dialog {
+  --el-dialog-border-radius: 10px;
+}
+.el-form-item {
+  // margin-bottom: 0 !important;
+}
+.el-card__body {
+  padding-bottom: 10px !important;
+}
+
+.el-header {
+  padding: 0 !important;
+}
+.el-pagination .is-active.number {
+  background: #D1AA3B !important;
+}
+.el-pagination .number:hover {
+  color: #D1AA3B;
+}
